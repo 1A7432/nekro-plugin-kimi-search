@@ -8,3 +8,6 @@ https://github.com/LLM-Red-Team/kimi-free-api?tab=readme-ov-file#%E6%8E%A5%E5%85
 
 ## 调整
 吧容器超时时间调大点
+
+## 警告
+请勿吧kimi free用于na本体
