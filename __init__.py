@@ -11,7 +11,7 @@ plugin = NekroPlugin(
     name="kimi搜索插件",  # TODO: 插件名称
     module_name="nekro_plugin_kimi_search",  # TODO: 插件模块名 (如果要发布该插件，需要在 NekroAI 社区中唯一)
     description="使用kimi-free进行联网搜索",  # TODO: 插件描述
-    version="1.0.0",  # TODO: 插件版本
+    version="1.0.1",  # TODO: 插件版本
     author="wess09",  # TODO: 插件作者
     url="https://github.com/wess09/nekro-plugin-kimi-search",  # TODO: 插件仓库地址
 )
@@ -24,7 +24,7 @@ class kimiconfig(ConfigBase):
 
     API_URL: str = Field(
         default="",
-        title="kimifreeAPI地址",
+        title="KIMI Free API地址",
         description="kimifreeAPI地址",
     )
     API_KEY: str = Field(
