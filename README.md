@@ -1,1 +1,1 @@
-# nekro-plugin-kimi-search
+# NekroAgent 插件模板
