@@ -9,7 +9,7 @@ from pydantic import Field
 # TODO: 插件元信息，请修改为你的插件信息
 plugin = NekroPlugin(
     name="kimi搜索插件",  # TODO: 插件名称
-    module_name="nekro-plugin-kimi-search",  # TODO: 插件模块名 (如果要发布该插件，需要在 NekroAI 社区中唯一)
+    module_name="nekro_plugin_kimi_search",  # TODO: 插件模块名 (如果要发布该插件，需要在 NekroAI 社区中唯一)
     description="使用kimi-free进行联网搜索",  # TODO: 插件描述
     version="1.0.0",  # TODO: 插件版本
     author="茗",  # TODO: 插件作者

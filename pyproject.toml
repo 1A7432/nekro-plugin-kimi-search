@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "nekro-plugin-template"
+name = "nekro-plugin-kimi-search"
 version = "1.0.0"
 description = "NekroAgent kimi搜索"
 authors = ["茗 <zicheng_1202@outlook.com>"]
