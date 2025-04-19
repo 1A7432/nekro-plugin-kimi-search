@@ -23,3 +23,5 @@ https://github.com/LLM-Red-Team/kimi-free-api?tab=readme-ov-file#%E6%8E%A5%E5%85
 
 ## 警告
 请勿吧kimi free用于na本体
+不要用太狠
+有概率会封号
