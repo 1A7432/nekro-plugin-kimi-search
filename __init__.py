@@ -32,6 +32,11 @@ class kimiconfig(ConfigBase):
         title="refresh_token",
         description="ey开头的那个",
     )
+    MODEL: str = Field(
+        default="",
+        title="refresh_token",
+        description="ey开头的那个",
+    )
 
 
 # 获取配置实例
@@ -57,7 +62,7 @@ async def searchkimi(_ctx: AgentCtx, search_data: str) -> str:
     # OpenAI API参数配置，可根据实际情况调整
     api_key = config.API_KEY
     api_base = config.API_URL
-    model = "kimi-search"
+    model = config.MODEL
     try:
         client = OpenAI(
             api_key=api_key,
