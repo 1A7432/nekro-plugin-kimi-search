@@ -34,8 +34,8 @@ class kimiconfig(ConfigBase):
     )
     MODEL: str = Field(
         default="",
-        title="refresh_token",
-        description="ey开头的那个",
+        title="模型名",
+        description="模型名，字面意思",
     )
 
 
