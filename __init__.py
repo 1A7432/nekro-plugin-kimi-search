@@ -6,7 +6,7 @@ from nekro_agent.core import logger
 from nekro_agent.services.plugin.base import ConfigBase, NekroPlugin, SandboxMethodType
 from pydantic import Field
 
-# TODO: 插件元信息，请修改为你的插件信息
+# 插件元信息
 plugin = NekroPlugin(
     name="KIMI AI 搜索插件",  # TODO: 插件名称
     module_name="nekro_plugin_kimi_search",  # TODO: 插件模块名 (如果要发布该插件，需要在 NekroAI 社区中唯一)
@@ -17,7 +17,7 @@ plugin = NekroPlugin(
 )
 
 
-# TODO: 插件配置，根据需要修改
+# 插件配置，根据需要修改
 @plugin.mount_config()
 class kimiconfig(ConfigBase):
     """kimi搜索插件配置"""
@@ -59,7 +59,7 @@ async def searchkimi(_ctx: AgentCtx, search_data: str) -> str:
         查询网页上的信息:
         searchkimi(search_data="https://url.com")
     """
-    # OpenAI API参数配置，可根据实际情况调整
+    # OpenAI API参数配置
     api_key = config.API_KEY
     api_base = config.API_URL
     model = config.MODEL
@@ -86,6 +86,4 @@ async def searchkimi(_ctx: AgentCtx, search_data: str) -> str:
 
 @plugin.mount_cleanup_method()
 async def clean_up():
-    """清理插件资源"""
-    # 如果有使用数据库连接、文件句柄或其他需要释放的资源，在此处添加清理逻辑
     logger.info("kimi搜索插件已清理完毕")
