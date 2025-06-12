@@ -8,10 +8,10 @@ from pydantic import Field
 
 # 插件元信息
 plugin = NekroPlugin(
-    name="KIMI AI 搜索插件",  # TODO: 插件名称
+    name="AI 智慧搜索",  # TODO: 插件名称
     module_name="nekro_plugin_kimi_search",  # TODO: 插件模块名 (如果要发布该插件，需要在 NekroAI 社区中唯一)
-    description="使用kimi-free-api进行联网搜索",  # TODO: 插件描述
-    version="1.0.4",  # TODO: 插件版本
+    description="使用 类OpenAI接口 进行联网搜索",  # TODO: 插件描述
+    version="1.1.5",  # TODO: 插件版本
     author="wess09",  # TODO: 插件作者
     url="https://github.com/wess09/nekro-plugin-kimi-search",  # TODO: 插件仓库地址
 )
@@ -24,18 +24,18 @@ class kimiconfig(ConfigBase):
 
     API_URL: str = Field(
         default="",
-        title="KIMI Free API地址，后面加/v1",
-        description="不能用中转站的，你自己部署",
+        title="OpenAI API地址，后面加/v1",
+        description="支持全部OpenAI格式的API 建议使用 Kimi FREE API 进行联网搜索，或其他有联网搜索的API",
     )
     API_KEY: str = Field(
         default="",
         title="refresh_token",
-        description="ey开头的那个",
+        description="API KEY 或 refresh_token",
     )
     MODEL: str = Field(
         default="",
         title="模型名",
-        description="模型名，字面意思",
+        description="进行搜索总结的模型",
     )
 
 
@@ -44,7 +44,7 @@ config: kimiconfig = plugin.get_config(kimiconfig)
 
 
 @plugin.mount_sandbox_method(SandboxMethodType.AGENT, name="搜索", description="搜索关键词并返回结果")
-async def searchkimi(_ctx: AgentCtx, search_data: str) -> str:
+async def search_ai(_ctx: AgentCtx, search_data: str) -> str:
     """搜索互联网上的关键词或网页URL
 
     Args:
@@ -55,9 +55,9 @@ async def searchkimi(_ctx: AgentCtx, search_data: str) -> str:
 
     Example:
         搜索关键词:
-        searchkimi(search_data="北京有什么好玩的")
+        search_ai(search_data="北京有什么好玩的")
         查询网页上的信息:
-        searchkimi(search_data="https://url.com")
+        search_ai(search_data="https://url.com")
     """
     # OpenAI API参数配置
     api_key = config.API_KEY
@@ -86,4 +86,4 @@ async def searchkimi(_ctx: AgentCtx, search_data: str) -> str:
 
 @plugin.mount_cleanup_method()
 async def clean_up():
-    logger.info("kimi搜索插件已清理完毕")
+    logger.info("AI智慧搜索插件已清理完毕")
