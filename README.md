@@ -30,4 +30,4 @@
 
 ## 鸣谢
 
-本项目 fork 自 [wess09/nekro-plugin-kimi-search](https://github.com/wess09/nekro-plugin-kimi-search)，并在此基础上进行了大量重构，以适配最新的 Kimi 官方 API。
+本项目 fork 自 [wess09/nekro-plugin-kimi-search](https://github.com/wess09/nekro-plugin-kimi-search)，并在此基础上进行修改。
