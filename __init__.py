@@ -15,7 +15,7 @@ plugin = NekroPlugin(
     description="通过 Kimi API 的 $web_search 内置函数进行联网搜索",  # TODO: 插件描述
     version="1.0.0",  # TODO: 插件版本
     author="dirac",  # TODO: 插件作者
-    url="https://github.com/wess09/nekro-plugin-kimi-search",  # TODO: 插件仓库地址
+    url="https://github.com/1A7432/nekro-plugin-kimi-search",  # TODO: 插件仓库地址
 )
 
 
