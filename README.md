@@ -27,3 +27,7 @@
 ## 使用
 
 配置完成后，当您向 Agent 提出需要访问互联网才能回答的问题时，它将自动调用此插件进行搜索，并为您提供总结后的答案。
+
+## 鸣谢
+
+本项目 fork 自 [wess09/nekro-plugin-kimi-search](https://github.com/wess09/nekro-plugin-kimi-search)，并在此基础上进行了大量重构，以适配最新的 Kimi 官方 API。
